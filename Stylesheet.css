@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+main {
+    padding: 25px 15px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+main > h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.welcome {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.welcome h2 {
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 500px) {
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card p {
+        font-size: 25px;
+    }
+}
+body, .app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Everything centers horizontally */
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* All sections take full width but stay centered */
+section {
+  width: 100%;
+}
