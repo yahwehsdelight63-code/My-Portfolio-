@@ -1,0 +1,140 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Invoice Management System</title>  
+
+<link rel="stylesheet" href="Stylesheet.css">
+
+</head>  <body>  <header>  
+    <h1>Invoice Management System</h1>  
+    <p>Manage your invoices easily</p>  
+</header>  
+
+<main>  
+
+    <h2>Dashboard</h2>  
+
+    <section class="dashboard">  
+
+        <div class="card">  
+            <h3>Total Invoices</h3>  
+            <p id="totalInvoices">0</p>  
+        </div>  
+
+        <div class="card">  
+            <h3>Paid</h3>  
+            <p id="paidInvoices">0</p>  
+        </div>  
+
+        <div class="card">  
+            <h3>Pending</h3>  
+            <p id="pendingInvoices">0</p>  
+        </div>  
+
+        <div class="card">  
+            <h3>Overdue</h3>  
+            <p id="overdueInvoices">0</p>  
+        </div>  
+
+    </section>  
+
+    <section class="welcome">  
+        <h2>Welcome 👋</h2>  
+        <p>  
+            Use this system to create invoices,  
+            manage customers and track invoice status.  
+        </p>  
+
+        <button onclick="createInvoice()">  
+            Create New Invoice  
+        </button>  
+    </section>  
+
+</main>
+
+<section class="customer-section">  <h2>Customer Management</h2>  
+
+<div class="customer-form">  
+    <input type="text" id="customerName" placeholder="Customer Name">  
+
+    <input type="email" id="customerEmail" placeholder="Customer Email">  
+
+    <input type="tel" id="customerPhone" placeholder="Phone Number">  
+
+    <button onclick="addCustomer()">Add Customer</button>  
+</div>  
+
+<div class="customer-list">  
+    <h3>Customers</h3>  
+
+    <div id="customers">  
+        <p>No customers added yet.</p>  
+    </div>  
+</div>
+
+</section>  
+<section class="invoice-section">  <h2>Create New Invoice</h2>  
+
+<div class="invoice-form">  
+
+    <input  
+        type="text"  
+        id="invoiceNumber"  
+        placeholder="Invoice Number"  
+    >  
+
+    <input  
+        type="text"  
+        id="invoiceCustomer"  
+        placeholder="Customer Name"  
+    >  
+
+    <input  
+        type="date"  
+        id="invoiceDate"  
+    >  
+
+    <input  
+        type="text"  
+        id="itemName"  
+        placeholder="Item or Service"  
+    >  
+
+    <input  
+        type="number"  
+        id="itemQuantity"  
+        placeholder="Quantity"  
+        min="1"  
+    >  
+
+    <input  
+        type="number"  
+        id="itemPrice"  
+        placeholder="Unit Price"  
+        min="0"  
+    >  
+
+    <button onclick="calculateInvoice()">  
+        Calculate Total  
+    </button>  
+
+    <h3>  
+        Total: ₦<span id="invoiceTotal">0</span>  
+    </h3>  
+
+    <button onclick="saveInvoice()">  
+        Save Invoice  
+    </button>  
+
+</div>
+
+</section>  
+<section class="invoice-list-section">  <h2>Invoice Management</h2>  
+
+<div id="invoiceList">  
+    <p>No invoices saved yet.</p>  
+</div>
+
+</section>  
+    <script src="App.js"></script>  </body>  
+</html>
